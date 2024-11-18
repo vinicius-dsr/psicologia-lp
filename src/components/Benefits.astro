@@ -1,0 +1,38 @@
+---
+const benefits = [
+  {
+    title: "Flexibilidade de Horários",
+    description: "Atendimento adaptado à sua rotina, inclusive em horários noturnos e fins de semana."
+  },
+  {
+    title: "Conforto e Privacidade",
+    description: "Faça suas sessões no ambiente seguro e familiar da sua casa."
+  },
+  {
+    title: "Economia de Tempo",
+    description: "Sem deslocamentos, aproveitando melhor seu tempo precioso."
+  },
+  {
+    title: "Mesma Eficácia",
+    description: "A terapia online tem a mesma efetividade do atendimento presencial."
+  }
+];
+---
+
+<section id="sobre" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Por que escolher a terapia online?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {benefits.map((benefit, index) => (
+        <div 
+          class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all hover:-translate-y-1" 
+          data-aos="fade-up" 
+          data-aos-delay={index * 100}
+        >
+          <h3 class="text-xl font-semibold mb-3 text-primary">{benefit.title}</h3>
+          <p class="text-gray-600">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
